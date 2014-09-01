@@ -1,6 +1,6 @@
 {
-    "name": "martin-bean/facebook-php-sdk-laravel",
-	"description": "A wrapper for the Facebook PHP SDK to work nicely with Laravel.",
+    "name": "martinbean/facebook-php-sdk-laravel",
+    "description": "A wrapper for the Facebook PHP SDK to work nicely with Laravel.",
     "version": "0.1.0",
     "type": "laravel-package",
     "keywords": ["facebook", "laravel"],
