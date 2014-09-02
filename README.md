@@ -6,11 +6,9 @@ A wrapper for the Facebook PHP SDK to work nicely with Laravel.
 
 Add this package’s name to your Composer manifest:
 
-```json
-"require": {
-    "martin-bean/facebook-php-sdk-laravel": "0.1.*"
-}
-```
+    "require": {
+        "martinbean/facebook-php-sdk-laravel": "0.1.*"
+    }
 
 ## Usage
 
