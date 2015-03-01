@@ -1,7 +1,7 @@
 {
     "name": "martinbean/facebook-php-sdk-laravel",
     "description": "A wrapper for the Facebook PHP SDK to work nicely with Laravel.",
-    "version": "0.1.0",
+    "version": "0.2.0",
     "type": "laravel-package",
     "keywords": ["facebook", "laravel"],
     "license": "MIT",
@@ -14,11 +14,11 @@
     "require": {
         "php": ">=5.4.0",
         "facebook/php-sdk-v4": "4.0.*",
-        "illuminate/support": "4.2.*"
+        "illuminate/support": ">=4.2"
     },
     "autoload": {
-        "psr-0": {
-            "MartinBean\\Facebook\\": "src/"
+        "psr-4": {
+            "MartinBean\\Facebook\\Laravel\\": "src/"
         }
     },
     "minimum-stability": "stable"

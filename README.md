@@ -1,13 +1,13 @@
 # Facebook PHP SDK Laravel package
 
-A wrapper for the Facebook PHP SDK to work nicely with Laravel.
+A wrapper for the Facebook PHP SDK to work nicely with Laravel 4 or 5.
 
 ## Installation
 
 Add this package’s name to your Composer manifest:
 
     "require": {
-        "martinbean/facebook-php-sdk-laravel": "0.1.*"
+        "martinbean/facebook-php-sdk-laravel": "0.2.*"
     }
 
 ## Usage
@@ -24,18 +24,18 @@ use Facebook\FacebookSession;
 use Facebook\GraphUser;
 use MartinBean\Facebook\Laravel\FacebookRedirectLoginHelper;
 
-class TestFacebookController extends BaseController {
+class FacebookController extends BaseController {
 
-	public function index()
+	public function redirect()
 	{
 		FacebookSession::setDefaultApplication(
-			Config::get('services.facebook.app_id'),
-			Config::get('services.facebook.secret')
+			Config::get('services.facebook.client_id'),
+			Config::get('services.facebook.client_secret')
 		);
 
-		$redirect_url = Request::url();
+		$redirectUrl = Request::url();
 
-		$helper = new FacebookRedirectLoginHelper($redirect_url);
+		$helper = new FacebookRedirectLoginHelper($redirectUrl);
 
 		if ($session = $helper->getSessionFromRedirect())
 		{
