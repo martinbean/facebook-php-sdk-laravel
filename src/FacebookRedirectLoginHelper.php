@@ -2,7 +2,7 @@
 namespace MartinBean\Facebook\Laravel;
 
 use Facebook\FacebookRedirectLoginHelper as BaseFacebookRedirectLoginHelper;
-use Input;
+use Request;
 use Session;
 
 class FacebookRedirectLoginHelper extends BaseFacebookRedirectLoginHelper
@@ -14,7 +14,7 @@ class FacebookRedirectLoginHelper extends BaseFacebookRedirectLoginHelper
      */
     protected function isValidRedirect()
     {
-        return $this->getCode() && Input::get('state', null) == $this->state;
+        return $this->getCode() && Request::get('state', null) == $this->state;
     }
 
     /**
@@ -24,7 +24,7 @@ class FacebookRedirectLoginHelper extends BaseFacebookRedirectLoginHelper
      */
     protected function getCode()
     {
-        return Input::get('code', null);
+        return Request::get('code', null);
     }
 
     /**
