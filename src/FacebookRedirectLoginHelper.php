@@ -14,6 +14,7 @@ class FacebookRedirectLoginHelper extends BaseFacebookRedirectLoginHelper
      */
     protected function isValidRedirect()
     {
+        $this->loadState();
         return $this->getCode() && Request::get('state', null) == $this->state;
     }
 
